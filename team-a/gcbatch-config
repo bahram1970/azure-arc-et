@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: gcbatch-config
-  namespace: team-a
+  namespace: z-gcbatch
 data:
     az_storage_account: "batchapitest"
     az_storage_secret: "R0rXXXXXXXX/nEccfjADyPfaXulMseLf3LQXXXXXXXXX"
