@@ -18,8 +18,7 @@ spec:
     spec:
       containers:
       - name: gcbatch-container
-        image: gccloudregistry.azurecr.io/microservices/gcbatch
+        image: microsoft/azure-vote-front:v1
         ports:
         - containerPort: 8094
-      imagePullSecrets:
-        - name: acr-auth-miniku
+     
