@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gcbatch-server
+  labels:
+    microservice: gcbatch
+spec:
+  # modify replicas according to your case
+  replicas: 1
+  minReadySeconds: 2
+  selector:
+    matchLabels:
+      microservice: gcbatch
+  template:
+    metadata:
+      labels:
+        microservice: gcbatch
+    spec:
+      containers:
+      - name: gcbatch-container
+        image: gccloudregistry.azurecr.io/microservices/gcbatch
+        ports:
+        - containerPort: 8094
+      imagePullSecrets:
+        - name: acr-auth-miniku
