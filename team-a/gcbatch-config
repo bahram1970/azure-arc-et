@@ -1,1 +1,10 @@
-
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gcbatch-config
+  namespace: team-a
+data:
+    az_storage_account: "batchapitest"
+    az_storage_secret: "R0rXXXXXXXX/nEccfjADyPfaXulMseLf3LQXXXXXXXXX"
+    az_storage_endpoint: "core.windows.net"
+    java_options: -Xmx512M
